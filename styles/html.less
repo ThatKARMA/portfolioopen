@@ -1,0 +1,209 @@
+// cursor
+body {
+    cursor: none; /*отключает курсор на странице, удалить строку, если нужно оставить курсор*/
+}
+
+.page {
+    display: none;
+}
+
+.Cursor {
+pointer-events: none;
+position: fixed;
+display: block;
+border-radius: 0;
+transform-origin: center center;
+top: 0;
+left: 0;
+z-index: 99998;
+filter: url("#goo");
+mix-blend-mode: difference;
+}
+
+.Cursor span {
+position: absolute;
+display: block;
+width: 26px;   /*ширина */
+height: 26px; /*высота*/
+border-radius: 20px;
+background-color: #fff; /*цвет*/
+transform-origin: center center;
+transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 480px) {
+.Cursor {
+    display: none;
+}
+}
+
+//system
+:hover {
+    cursor: none;
+}
+
+.clr {
+    clear: both;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container  {
+    background-color: #6a48d7;
+    min-height: 100vh;
+    width: 100%;
+}
+
+//nav
+.nav-clay {
+    background-color: #6a48d7;
+    height: 90px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+    transform: translateY(0px);
+    opacity: 1;
+    width: 70%;
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.navclay_hide {
+    background-color: #876ed7;
+    height: 90px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+    transform: translateY(-90px);
+    opacity: 0;
+}
+
+.nav-clay > .logo,
+.nav > .logo {
+    text-align: center;
+}
+
+.nav {
+    background: transparent;
+    width: 70%;
+    margin: 0 auto;
+    height: 80px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.logo {
+    float: left;
+    font-size: 17px;
+}
+
+.nav-links {
+    float: right;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.nav-links > a {
+    float: left;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-links > a:hover {
+    color: #1c0375;
+    text-shadow:0 0 15px rgb(182, 171, 171);
+}
+
+.index_link {
+    text-decoration: none;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.index_link:hover {
+    color: #1c0375;
+    text-shadow:0 0 10px rgb(182, 171, 171);
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+//buttons
+.upBtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #200772;
+    margin-right: 2%;
+    cursor: pointer;
+    margin-bottom: 1%;
+    opacity: 1;
+    transition: .4s;
+    color: #876ed7;
+}
+
+.upBtn_hide {
+    opacity: 0;
+}
+
+.upBtn:hover {
+    background-color: white;
+    cursor: none;
+}
+
+.upBtn-text::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 10px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    border-left-color: #292929;
+}
+
+.upBtn-text {
+    position: absolute;
+    right: 80px;
+    white-space: nowrap;
+    background: #fff;
+    padding: 9px 13px;
+    font-size: 15px;
+    border-radius: 3px;
+    -webkit-transform: translateX(0%) translateY(-50%);
+    transform: translateX(0%) translateY(-50%);
+    top: 50%;
+    background: #292929;
+    color: #fff;
+    opacity: .85;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
